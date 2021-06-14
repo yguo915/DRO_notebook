@@ -1,0 +1,13 @@
+name: notebook
+channels:
+  - conda-forge
+prefix: /srv/conda/envs/notebook
+dependencies:
+  - python
+  - numpy
+  - pip
+  - pip:
+    - nbgitpuller
+    - sphinx-gallery
+    - pandas
+    - matplotlib
