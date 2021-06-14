@@ -29,13 +29,13 @@ class Tissue:
     def get_ratio(self, n):
         return np.count_nonzero(self.tissue_arr3D == n) / self.tissue_arr3D.size
 
-    def vascular_plot3D(self,filename):
+    def vascular_plot3D(self, filename):
         vascular = self.get_vascular()
-        z,x,y = vascular.nonzero()
+        z, x, y = vascular.nonzero()
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
         ax.scatter(x, y, z, zdir='z', c='blue')
-        plt.savefig(filename)
+        plt.savefig("out/" + filename)
 
 # slice1: [x, y, 0] slice2: [x, y, 1]......
 # tissue32 = tissue_arr3D[:,:,31]
